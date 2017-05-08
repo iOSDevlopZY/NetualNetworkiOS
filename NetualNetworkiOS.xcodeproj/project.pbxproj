@@ -16,6 +16,7 @@
 		0C20DA451EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA441EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m */; };
 		0C20DA501EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA4F1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m */; };
 		0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */; };
+		0C5430C11EC06D7A0081A626 /* MBProgressHUD+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */; };
 		0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */; };
 		0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */; };
 		0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */; };
@@ -57,6 +58,8 @@
 		0C20DA511EBEB87D00D0FEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BPNN.c; sourceTree = "<group>"; };
 		0C20DA601EC01B0200D0FEE6 /* BPNN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPNN.h; sourceTree = "<group>"; };
+		0C5430BF1EC06D7A0081A626 /* MBProgressHUD+Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Simple.h"; sourceTree = "<group>"; };
+		0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Simple.m"; sourceTree = "<group>"; };
 		0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
 		0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
 		0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 		0C9FDBD21EC03FB900C5B068 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				0C5430BF1EC06D7A0081A626 /* MBProgressHUD+Simple.h */,
+				0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */,
 				0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */,
 				0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */,
 				0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */,
@@ -314,6 +319,7 @@
 				0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */,
 				0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */,
 				0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */,
+				0C5430C11EC06D7A0081A626 /* MBProgressHUD+Simple.m in Sources */,
 				0C20DA321EBEB87D00D0FEE6 /* ViewController.m in Sources */,
 				0C20DA2F1EBEB87D00D0FEE6 /* AppDelegate.m in Sources */,
 				0C20DA2C1EBEB87D00D0FEE6 /* main.m in Sources */,

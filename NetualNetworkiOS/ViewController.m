@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "BPNN.h"
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+Simple.h"
 #import "MBProgressHUD+NJ.h"
 @interface ViewController ()
 {
@@ -68,7 +68,7 @@
         const char * infilePathChar = [inFilePath UTF8String];
         const char * outfilePathChar = [outFilePath UTF8String];
         const char * operChar =[oper UTF8String];
-        timer1=[NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(process) userInfo:nil repeats:YES];
+        timer1=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(process) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop]addTimer:timer1 forMode:NSRunLoopCommonModes];
         writeTest(infilePathChar, outfilePathChar,operChar);
         readData(infilePathChar, outfilePathChar);
@@ -88,7 +88,7 @@
 {
     if(isFinished)
     {
-        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"训练完成"];
         self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
         isFinished=false;
@@ -102,8 +102,8 @@
 - (void)process
 {
     
-     int c=process();
-    [MBProgressHUD showMessage:[NSString stringWithFormat:@"训练神经网络%d次",c] toView:self.view];
+    int c=process();
+    [MBProgressHUD showIndicatorWithText:[NSString stringWithFormat:@"训练神经网络%d次",c]];
     
 }
 //预测
