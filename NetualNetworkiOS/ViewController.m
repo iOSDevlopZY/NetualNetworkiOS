@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BPNN.h"
+#import "MBProgressHUD.h"
 #import "MBProgressHUD+NJ.h"
 @interface ViewController ()
 {
@@ -15,6 +16,7 @@
     double cost;
     NSString *oper;
     NSTimer *timer;
+    NSTimer *timer1;
 }
 //训练次数文本框
 @property (weak, nonatomic) IBOutlet UITextField *trainTimesTF;
@@ -58,6 +60,7 @@
     }
     else
     {
+        int times=_trainTimesTF.text.intValue;
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *docDir = [paths objectAtIndex:0];
         NSString *inFilePath=[docDir stringByAppendingPathComponent:@"in.txt"];
@@ -65,15 +68,15 @@
         const char * infilePathChar = [inFilePath UTF8String];
         const char * outfilePathChar = [outFilePath UTF8String];
         const char * operChar =[oper UTF8String];
-        [MBProgressHUD showMessage:@"训练神经网络中"];
+        timer1=[NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(process) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop]addTimer:timer1 forMode:NSRunLoopCommonModes];
         writeTest(infilePathChar, outfilePathChar,operChar);
         readData(infilePathChar, outfilePathChar);
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            
             //初始化神经网络
             initBPNework();
             //训练神经网络
-            cost=trainNetwork(_trainTimesTF.text.intValue);
+            cost=trainNetwork(times);
             isFinished=true;
         });
         timer=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
@@ -85,13 +88,23 @@
 {
     if(isFinished)
     {
-        [MBProgressHUD hideHUD];
+        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
         [MBProgressHUD showSuccess:@"训练完成"];
         self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
         isFinished=false;
         [timer invalidate];
         timer=nil;
+        [timer1 invalidate];
+        timer1=nil;
     }
+}
+#pragma mark -进度
+- (void)process
+{
+    
+     int c=process();
+    [MBProgressHUD showMessage:[NSString stringWithFormat:@"训练神经网络%d次",c] toView:self.view];
+    
 }
 //预测
 - (IBAction)predict:(id)sender {

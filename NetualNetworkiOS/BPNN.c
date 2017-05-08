@@ -28,6 +28,7 @@ double Maxin[In],Minin[In],Maxout[Out],Minout[Out];
 double OutputData[Out];
 double dv[Out][Neuron],dw[Neuron][In];
 double e;
+int c=0;
 
 //写入数据
 void writeTest(const char *inPath,const char *outPath,const char *oper){
@@ -233,7 +234,7 @@ void writeNeuron()
 //训练神经网络
 double  trainNetwork(int TrainC){
     
-    int i,c=0,j;
+    int i,j;
     //小于训练次数并且样本平均误差>0.01是继续训练
     do{
         e=0;
@@ -249,7 +250,14 @@ double  trainNetwork(int TrainC){
         printf("%d----样本平均误差为：%lf\n",c,e/Data);
         c++;
     }while(c<TrainC && e/Data>0.01);
+    c=0;
     return e/Data;
+}
+
+int process()
+{
+    
+    return c;
 }
 
 
