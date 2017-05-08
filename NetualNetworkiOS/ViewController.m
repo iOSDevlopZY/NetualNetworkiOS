@@ -14,6 +14,7 @@
     bool isFinished;
     double cost;
     NSString *oper;
+    NSTimer *timer;
 }
 //训练次数文本框
 @property (weak, nonatomic) IBOutlet UITextField *trainTimesTF;
@@ -73,10 +74,9 @@
             initBPNework();
             //训练神经网络
             cost=trainNetwork(_trainTimesTF.text.intValue);
-            
             isFinished=true;
         });
-        NSTimer *timer=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
+        timer=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
     }
 }
@@ -86,11 +86,11 @@
     if(isFinished)
     {
         [MBProgressHUD hideHUD];
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            [MBProgressHUD showSuccess:@"训练完成"];
-        });
+        [MBProgressHUD showSuccess:@"训练完成"];
         self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
+        isFinished=false;
+        [timer invalidate];
+        timer=nil;
     }
 }
 //预测
