@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C20DA2C1EBEB87D00D0FEE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA2B1EBEB87D00D0FEE6 /* main.m */; };
+		0C20DA2F1EBEB87D00D0FEE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA2E1EBEB87D00D0FEE6 /* AppDelegate.m */; };
+		0C20DA321EBEB87D00D0FEE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA311EBEB87D00D0FEE6 /* ViewController.m */; };
+		0C20DA351EBEB87D00D0FEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C20DA331EBEB87D00D0FEE6 /* Main.storyboard */; };
+		0C20DA371EBEB87D00D0FEE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C20DA361EBEB87D00D0FEE6 /* Assets.xcassets */; };
+		0C20DA3A1EBEB87D00D0FEE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C20DA381EBEB87D00D0FEE6 /* LaunchScreen.storyboard */; };
+		0C20DA451EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA441EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m */; };
+		0C20DA501EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA4F1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m */; };
+		0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */; };
+		0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */; };
+		0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */; };
+		0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C20DA411EBEB87D00D0FEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C20DA1F1EBEB87D00D0FEE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C20DA261EBEB87D00D0FEE6;
+			remoteInfo = NetualNetworkiOS;
+		};
+		0C20DA4C1EBEB87D00D0FEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C20DA1F1EBEB87D00D0FEE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C20DA261EBEB87D00D0FEE6;
+			remoteInfo = NetualNetworkiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C20DA271EBEB87D00D0FEE6 /* NetualNetworkiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetualNetworkiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C20DA2B1EBEB87D00D0FEE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0C20DA2D1EBEB87D00D0FEE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0C20DA2E1EBEB87D00D0FEE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0C20DA301EBEB87D00D0FEE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0C20DA311EBEB87D00D0FEE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0C20DA341EBEB87D00D0FEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C20DA361EBEB87D00D0FEE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C20DA391EBEB87D00D0FEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C20DA3B1EBEB87D00D0FEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C20DA401EBEB87D00D0FEE6 /* NetualNetworkiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetualNetworkiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C20DA441EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetualNetworkiOSTests.m; sourceTree = "<group>"; };
+		0C20DA461EBEB87D00D0FEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C20DA4B1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetualNetworkiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C20DA4F1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetualNetworkiOSUITests.m; sourceTree = "<group>"; };
+		0C20DA511EBEB87D00D0FEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BPNN.c; sourceTree = "<group>"; };
+		0C20DA601EC01B0200D0FEE6 /* BPNN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPNN.h; sourceTree = "<group>"; };
+		0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
+		0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
+		0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		0C9FDBD61EC03FB900C5B068 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C20DA241EBEB87D00D0FEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA3D1EBEB87D00D0FEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA481EBEB87D00D0FEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C20DA1E1EBEB87D00D0FEE6 = {
+			isa = PBXGroup;
+			children = (
+				0C20DA291EBEB87D00D0FEE6 /* NetualNetworkiOS */,
+				0C20DA431EBEB87D00D0FEE6 /* NetualNetworkiOSTests */,
+				0C20DA4E1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests */,
+				0C20DA281EBEB87D00D0FEE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C20DA281EBEB87D00D0FEE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C20DA271EBEB87D00D0FEE6 /* NetualNetworkiOS.app */,
+				0C20DA401EBEB87D00D0FEE6 /* NetualNetworkiOSTests.xctest */,
+				0C20DA4B1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C20DA291EBEB87D00D0FEE6 /* NetualNetworkiOS */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FDBD21EC03FB900C5B068 /* MBProgressHUD */,
+				0C20DA5D1EC01A5200D0FEE6 /* BPNN */,
+				0C20DA2D1EBEB87D00D0FEE6 /* AppDelegate.h */,
+				0C20DA2E1EBEB87D00D0FEE6 /* AppDelegate.m */,
+				0C20DA301EBEB87D00D0FEE6 /* ViewController.h */,
+				0C20DA311EBEB87D00D0FEE6 /* ViewController.m */,
+				0C20DA331EBEB87D00D0FEE6 /* Main.storyboard */,
+				0C20DA361EBEB87D00D0FEE6 /* Assets.xcassets */,
+				0C20DA381EBEB87D00D0FEE6 /* LaunchScreen.storyboard */,
+				0C20DA3B1EBEB87D00D0FEE6 /* Info.plist */,
+				0C20DA2A1EBEB87D00D0FEE6 /* Supporting Files */,
+			);
+			path = NetualNetworkiOS;
+			sourceTree = "<group>";
+		};
+		0C20DA2A1EBEB87D00D0FEE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C20DA2B1EBEB87D00D0FEE6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C20DA431EBEB87D00D0FEE6 /* NetualNetworkiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C20DA441EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m */,
+				0C20DA461EBEB87D00D0FEE6 /* Info.plist */,
+			);
+			path = NetualNetworkiOSTests;
+			sourceTree = "<group>";
+		};
+		0C20DA4E1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C20DA4F1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m */,
+				0C20DA511EBEB87D00D0FEE6 /* Info.plist */,
+			);
+			path = NetualNetworkiOSUITests;
+			sourceTree = "<group>";
+		};
+		0C20DA5D1EC01A5200D0FEE6 /* BPNN */ = {
+			isa = PBXGroup;
+			children = (
+				0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */,
+				0C20DA601EC01B0200D0FEE6 /* BPNN.h */,
+			);
+			name = BPNN;
+			sourceTree = "<group>";
+		};
+		0C9FDBD21EC03FB900C5B068 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */,
+				0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */,
+				0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */,
+				0C9FDBD61EC03FB900C5B068 /* MBProgressHUD.h */,
+				0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C20DA261EBEB87D00D0FEE6 /* NetualNetworkiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C20DA541EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOS" */;
+			buildPhases = (
+				0C20DA231EBEB87D00D0FEE6 /* Sources */,
+				0C20DA241EBEB87D00D0FEE6 /* Frameworks */,
+				0C20DA251EBEB87D00D0FEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetualNetworkiOS;
+			productName = NetualNetworkiOS;
+			productReference = 0C20DA271EBEB87D00D0FEE6 /* NetualNetworkiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C20DA3F1EBEB87D00D0FEE6 /* NetualNetworkiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C20DA571EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOSTests" */;
+			buildPhases = (
+				0C20DA3C1EBEB87D00D0FEE6 /* Sources */,
+				0C20DA3D1EBEB87D00D0FEE6 /* Frameworks */,
+				0C20DA3E1EBEB87D00D0FEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C20DA421EBEB87D00D0FEE6 /* PBXTargetDependency */,
+			);
+			name = NetualNetworkiOSTests;
+			productName = NetualNetworkiOSTests;
+			productReference = 0C20DA401EBEB87D00D0FEE6 /* NetualNetworkiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C20DA4A1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C20DA5A1EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOSUITests" */;
+			buildPhases = (
+				0C20DA471EBEB87D00D0FEE6 /* Sources */,
+				0C20DA481EBEB87D00D0FEE6 /* Frameworks */,
+				0C20DA491EBEB87D00D0FEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C20DA4D1EBEB87D00D0FEE6 /* PBXTargetDependency */,
+			);
+			name = NetualNetworkiOSUITests;
+			productName = NetualNetworkiOSUITests;
+			productReference = 0C20DA4B1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C20DA1F1EBEB87D00D0FEE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = mac;
+				TargetAttributes = {
+					0C20DA261EBEB87D00D0FEE6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3JKB9XZMQU;
+						ProvisioningStyle = Automatic;
+					};
+					0C20DA3F1EBEB87D00D0FEE6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YZX9D3JF2R;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C20DA261EBEB87D00D0FEE6;
+					};
+					0C20DA4A1EBEB87D00D0FEE6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YZX9D3JF2R;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C20DA261EBEB87D00D0FEE6;
+					};
+				};
+			};
+			buildConfigurationList = 0C20DA221EBEB87D00D0FEE6 /* Build configuration list for PBXProject "NetualNetworkiOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C20DA1E1EBEB87D00D0FEE6;
+			productRefGroup = 0C20DA281EBEB87D00D0FEE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C20DA261EBEB87D00D0FEE6 /* NetualNetworkiOS */,
+				0C20DA3F1EBEB87D00D0FEE6 /* NetualNetworkiOSTests */,
+				0C20DA4A1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C20DA251EBEB87D00D0FEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C20DA3A1EBEB87D00D0FEE6 /* LaunchScreen.storyboard in Resources */,
+				0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */,
+				0C20DA371EBEB87D00D0FEE6 /* Assets.xcassets in Resources */,
+				0C20DA351EBEB87D00D0FEE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA3E1EBEB87D00D0FEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA491EBEB87D00D0FEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C20DA231EBEB87D00D0FEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */,
+				0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */,
+				0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */,
+				0C20DA321EBEB87D00D0FEE6 /* ViewController.m in Sources */,
+				0C20DA2F1EBEB87D00D0FEE6 /* AppDelegate.m in Sources */,
+				0C20DA2C1EBEB87D00D0FEE6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA3C1EBEB87D00D0FEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C20DA451EBEB87D00D0FEE6 /* NetualNetworkiOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C20DA471EBEB87D00D0FEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C20DA501EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C20DA421EBEB87D00D0FEE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C20DA261EBEB87D00D0FEE6 /* NetualNetworkiOS */;
+			targetProxy = 0C20DA411EBEB87D00D0FEE6 /* PBXContainerItemProxy */;
+		};
+		0C20DA4D1EBEB87D00D0FEE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C20DA261EBEB87D00D0FEE6 /* NetualNetworkiOS */;
+			targetProxy = 0C20DA4C1EBEB87D00D0FEE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C20DA331EBEB87D00D0FEE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C20DA341EBEB87D00D0FEE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C20DA381EBEB87D00D0FEE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C20DA391EBEB87D00D0FEE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C20DA521EBEB87D00D0FEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C20DA531EBEB87D00D0FEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C20DA551EBEB87D00D0FEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3JKB9XZMQU;
+				INFOPLIST_FILE = NetualNetworkiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.medcare.NetualNetworkiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0C20DA561EBEB87D00D0FEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3JKB9XZMQU;
+				INFOPLIST_FILE = NetualNetworkiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.medcare.NetualNetworkiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0C20DA581EBEB87D00D0FEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YZX9D3JF2R;
+				INFOPLIST_FILE = NetualNetworkiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mac.NetualNetworkiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetualNetworkiOS.app/NetualNetworkiOS";
+			};
+			name = Debug;
+		};
+		0C20DA591EBEB87D00D0FEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YZX9D3JF2R;
+				INFOPLIST_FILE = NetualNetworkiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mac.NetualNetworkiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetualNetworkiOS.app/NetualNetworkiOS";
+			};
+			name = Release;
+		};
+		0C20DA5B1EBEB87D00D0FEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YZX9D3JF2R;
+				INFOPLIST_FILE = NetualNetworkiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mac.NetualNetworkiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NetualNetworkiOS;
+			};
+			name = Debug;
+		};
+		0C20DA5C1EBEB87D00D0FEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YZX9D3JF2R;
+				INFOPLIST_FILE = NetualNetworkiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mac.NetualNetworkiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NetualNetworkiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C20DA221EBEB87D00D0FEE6 /* Build configuration list for PBXProject "NetualNetworkiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C20DA521EBEB87D00D0FEE6 /* Debug */,
+				0C20DA531EBEB87D00D0FEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C20DA541EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C20DA551EBEB87D00D0FEE6 /* Debug */,
+				0C20DA561EBEB87D00D0FEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C20DA571EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C20DA581EBEB87D00D0FEE6 /* Debug */,
+				0C20DA591EBEB87D00D0FEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C20DA5A1EBEB87D00D0FEE6 /* Build configuration list for PBXNativeTarget "NetualNetworkiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C20DA5B1EBEB87D00D0FEE6 /* Debug */,
+				0C20DA5C1EBEB87D00D0FEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C20DA1F1EBEB87D00D0FEE6 /* Project object */;
+}
