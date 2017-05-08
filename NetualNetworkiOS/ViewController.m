@@ -11,7 +11,9 @@
 #import "MBProgressHUD+NJ.h"
 @interface ViewController ()
 {
+    bool isFinished;
     double cost;
+    NSString *oper;
 }
 //训练次数文本框
 @property (weak, nonatomic) IBOutlet UITextField *trainTimesTF;
@@ -26,12 +28,15 @@
 //预测按钮
 @property (weak, nonatomic) IBOutlet UIButton *pridictBtn;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *operCtl;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    oper =@"+";
+    isFinished=false;
     self.trainBtn.layer.borderColor=[UIColor blackColor].CGColor;
     self.trainBtn.layer.cornerRadius=4.0f;
     self.trainBtn.layer.borderWidth=2.0f;
@@ -41,6 +46,7 @@
     self.pridictBtn.layer.cornerRadius=4.0f;
     self.pridictBtn.layer.borderWidth=2.0f;
     self.pridictBtn.layer.masksToBounds=YES;
+    
 }
 #pragma mark -写入测试数据并且进行训练
 - (IBAction)trainExample:(id)sender {
@@ -57,18 +63,34 @@
         NSString *outFilePath=[docDir stringByAppendingPathComponent:@"out.txt"];
         const char * infilePathChar = [inFilePath UTF8String];
         const char * outfilePathChar = [outFilePath UTF8String];
+        const char * operChar =[oper UTF8String];
         [MBProgressHUD showMessage:@"训练神经网络中"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            writeTest(infilePathChar, outfilePathChar);
-            readData(infilePathChar, outfilePathChar);
+        writeTest(infilePathChar, outfilePathChar,operChar);
+        readData(infilePathChar, outfilePathChar);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
             //初始化神经网络
             initBPNework();
             //训练神经网络
-            cost=trainNetwork(_costLabel.text.intValue);
-            [MBProgressHUD hideHUD];
-            [MBProgressHUD showSuccess:@"训练完毕"];
-            self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
+            cost=trainNetwork(_trainTimesTF.text.intValue);
+            
+            isFinished=true;
         });
+        NSTimer *timer=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
+    }
+}
+#pragma mark -检测是否计算完成
+- (void)checkStatus
+{
+    if(isFinished)
+    {
+        [MBProgressHUD hideHUD];
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [MBProgressHUD showSuccess:@"训练完成"];
+        });
+        self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
     }
 }
 //预测
@@ -91,5 +113,34 @@
 {
     [self.view endEditing:YES];
     
+}
+- (IBAction)oper:(id)sender {
+    switch([sender selectedSegmentIndex])
+    {
+        case 0://+
+            oper=@"+";
+            self.trainTimesTF.text=nil;
+            self.enterNumber1.text=nil;
+            self.enterNumber2.text=nil;
+            break;
+        case 1://-
+            oper=@"-";
+            self.trainTimesTF.text=nil;
+            self.enterNumber1.text=nil;
+            self.enterNumber2.text=nil;
+            break;
+        case 2://*
+            oper=@"*";
+            self.trainTimesTF.text=nil;
+            self.enterNumber1.text=nil;
+            self.enterNumber2.text=nil;
+            break;
+        case 3:// /
+            oper=@"/";
+            self.trainTimesTF.text=nil;
+            self.enterNumber1.text=nil;
+            self.enterNumber2.text=nil;
+            break;
+    }
 }
 @end

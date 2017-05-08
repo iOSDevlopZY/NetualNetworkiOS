@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 #include <time.h>
 #include <math.h>
 #include <stdlib.h>
@@ -29,7 +30,7 @@ double dv[Out][Neuron],dw[Neuron][In];
 double e;
 
 //写入数据
-void writeTest(const char *inPath,const char *outPath){
+void writeTest(const char *inPath,const char *outPath,const char *oper){
     FILE *fp1,*fp2;
     double r1,r2;
     int i;
@@ -42,11 +43,33 @@ void writeTest(const char *inPath,const char *outPath){
         printf("can not open the out file\n");
         exit(0);
     }
-    for(i=0;i<Data;i++){
-        r1=rand()%1000/100.0;
-        r2=rand()%1000/100.0;
-        fprintf(fp1,"%lf  %lf\n",r1,r2);
-        fprintf(fp2,"%lf \n",r1+r2);
+    if(strcmp(oper,"+")==0)
+    {
+        for(i=0;i<Data;i++){
+            r1=rand()%1000/100.0;
+            r2=rand()%1000/100.0;
+            fprintf(fp1,"%lf  %lf\n",r1,r2);
+            fprintf(fp2,"%lf \n",r1+r2);
+        }
+    }
+    else if(strcmp(oper,"-")==0)
+    {
+        for(i=0;i<Data;i++){
+            r1=rand()%1000/100.0;
+            r2=rand()%1000/100.0;
+            fprintf(fp1,"%lf  %lf\n",r1,r2);
+            fprintf(fp2,"%lf \n",r1-r2);
+        }
+
+    }
+    else if(strcmp(oper,"*")==0)
+    {
+        for(i=0;i<Data;i++){
+            r1=rand()%1000/100.0;
+            r2=rand()%1000/100.0;
+            fprintf(fp1,"%lf  %lf\n",r1,r2);
+            fprintf(fp2,"%lf \n",r1*r2);
+        }
     }
     fclose(fp1);
     fclose(fp2);
