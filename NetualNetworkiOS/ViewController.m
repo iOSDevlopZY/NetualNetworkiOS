@@ -119,7 +119,6 @@
         double result=Result(val1,val2);
         self.resultLabel.text=[NSString stringWithFormat:@"%f",result];
     }
-    
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
