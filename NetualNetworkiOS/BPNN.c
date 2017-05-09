@@ -242,8 +242,10 @@ double  trainNetwork(int TrainC){
             //计算输出
             computO(i);
             for (j = 0; j < Out; ++j)
+            {
                 //计算误差
                 e+=fabs((OutputData[j]-d_out[i][j])/d_out[i][j]);
+            }
             //后向传播
             backUpdate(i);
         }
