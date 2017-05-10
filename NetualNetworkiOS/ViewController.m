@@ -10,6 +10,8 @@
 #import "BPNN.h"
 #import "MBProgressHUD+Simple.h"
 #import "MBProgressHUD+NJ.h"
+#import "TouchID.h"
+
 @interface ViewController ()
 {
     bool isFinished;
@@ -49,6 +51,7 @@
     self.pridictBtn.layer.cornerRadius=4.0f;
     self.pridictBtn.layer.borderWidth=2.0f;
     self.pridictBtn.layer.masksToBounds=YES;
+    [TouchID create];
 }
 #pragma mark -写入测试数据并且进行训练
 - (IBAction)trainExample:(id)sender {

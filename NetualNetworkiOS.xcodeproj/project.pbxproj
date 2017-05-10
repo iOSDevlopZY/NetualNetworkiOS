@@ -17,6 +17,7 @@
 		0C20DA501EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA4F1EBEB87D00D0FEE6 /* NetualNetworkiOSUITests.m */; };
 		0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */; };
 		0C5430C11EC06D7A0081A626 /* MBProgressHUD+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */; };
+		0C5431091EC29CF60081A626 /* TouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5431081EC29CF60081A626 /* TouchID.m */; };
 		0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */; };
 		0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */; };
 		0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */; };
@@ -60,6 +61,8 @@
 		0C20DA601EC01B0200D0FEE6 /* BPNN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPNN.h; sourceTree = "<group>"; };
 		0C5430BF1EC06D7A0081A626 /* MBProgressHUD+Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Simple.h"; sourceTree = "<group>"; };
 		0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Simple.m"; sourceTree = "<group>"; };
+		0C5431071EC29CF60081A626 /* TouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchID.h; sourceTree = "<group>"; };
+		0C5431081EC29CF60081A626 /* TouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchID.m; sourceTree = "<group>"; };
 		0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
 		0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
 		0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		0C20DA291EBEB87D00D0FEE6 /* NetualNetworkiOS */ = {
 			isa = PBXGroup;
 			children = (
+				0C5431061EC29CD30081A626 /* TouchID */,
 				0C9FDBD21EC03FB900C5B068 /* MBProgressHUD */,
 				0C20DA5D1EC01A5200D0FEE6 /* BPNN */,
 				0C20DA2D1EBEB87D00D0FEE6 /* AppDelegate.h */,
@@ -163,6 +167,15 @@
 				0C20DA601EC01B0200D0FEE6 /* BPNN.h */,
 			);
 			name = BPNN;
+			sourceTree = "<group>";
+		};
+		0C5431061EC29CD30081A626 /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				0C5431071EC29CF60081A626 /* TouchID.h */,
+				0C5431081EC29CF60081A626 /* TouchID.m */,
+			);
+			name = TouchID;
 			sourceTree = "<group>";
 		};
 		0C9FDBD21EC03FB900C5B068 /* MBProgressHUD */ = {
@@ -320,6 +333,7 @@
 				0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */,
 				0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */,
 				0C5430C11EC06D7A0081A626 /* MBProgressHUD+Simple.m in Sources */,
+				0C5431091EC29CF60081A626 /* TouchID.m in Sources */,
 				0C20DA321EBEB87D00D0FEE6 /* ViewController.m in Sources */,
 				0C20DA2F1EBEB87D00D0FEE6 /* AppDelegate.m in Sources */,
 				0C20DA2C1EBEB87D00D0FEE6 /* main.m in Sources */,
