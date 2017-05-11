@@ -102,10 +102,8 @@
 #pragma mark -进度
 - (void)process
 {
-    
     int c=process();
     [MBProgressHUD showIndicatorWithText:[NSString stringWithFormat:@"训练神经网络%d次",c]];
-    
 }
 //预测
 - (IBAction)predict:(id)sender {
