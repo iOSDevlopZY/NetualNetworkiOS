@@ -124,7 +124,7 @@
     {
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"训练完成"];
-        [self createLocalNotification];
+        
         self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
         isFinished=false;
         [timer invalidate];
@@ -134,30 +134,11 @@
         
     }
 }
-#pragma mark-创建本地通知
-- (void)createLocalNotification
-{
-    
-    UNNotificationAttachment *attachment=[UNNotificationAttachment attachmentWithIdentifier:@"imageAttach" URL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"png"]] options:nil error:nil];
-    UNMutableNotificationContent *content=[[UNMutableNotificationContent alloc]init];
-    content.badge=@1;
-    content.title=@"提示";
-    content.body=@"神经网络训练完成";
-    content.attachments=@[attachment];
-    content.sound=[UNNotificationSound defaultSound];
-    UNTimeIntervalNotificationTrigger *trigger=[UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO ];
-    UNNotificationRequest *request=[UNNotificationRequest requestWithIdentifier:@"myNoti" content:content trigger:trigger];
-    //添加通知请求
-    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-        
-    }];
-    
-}
+
 #pragma mark -进度
 - (void)process
 {
     int c=process();
-    
     [MBProgressHUD showIndicatorWithText:[NSString stringWithFormat:@"训练神经网络%d次",c]];
 }
 //预测

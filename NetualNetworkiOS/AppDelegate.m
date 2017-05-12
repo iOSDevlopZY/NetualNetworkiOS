@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import "BPNN.h"
-#import "ViewController.h"
+#import <UserNotifications/UserNotifications.h>
 #import "TouchID.h"
 
 @interface AppDelegate ()
 {
-   
+    NSTimer *timer1;
 }
 @end
 
@@ -34,15 +34,44 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+   [self createLocalNotification];
 }
-
+#pragma mark-创建本地通知
+- (void)createLocalNotification
+{
+    int c=process();
+    if(c!=0)
+    {
+        UNNotificationAction *enterAction = [UNNotificationAction actionWithIdentifier:@"enterApp" title:@"恢复训练" options:UNNotificationActionOptionForeground];
+        UNNotificationAction *ingnoreAction = [UNNotificationAction actionWithIdentifier:@"ignore" title:@"忽略" options:UNNotificationActionOptionDestructive];
+        UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"helloIdentifier" actions:@[enterAction,ingnoreAction] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
+        
+        UNNotificationAttachment *attachment=[UNNotificationAttachment attachmentWithIdentifier:@"imageAttach" URL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"png"]] options:nil error:nil];
+        UNMutableNotificationContent *content=[[UNMutableNotificationContent alloc]init];
+        content.badge=@1;
+        content.title=@"提示";
+        content.body=@"神经网络训练已暂停";
+        content.categoryIdentifier = @"helloIdentifier";
+        content.attachments=@[attachment];
+        content.sound=[UNNotificationSound defaultSound];
+        UNTimeIntervalNotificationTrigger *trigger=[UNTimeIntervalNotificationTrigger triggerWithTimeInterval:2 repeats:NO ];
+        UNNotificationRequest *request=[UNNotificationRequest requestWithIdentifier:@"myNoti" content:content trigger:trigger];
+        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
+        //添加通知请求
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+            
+        }];
+    }
+    
+    
+}
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [UIApplication sharedApplication].applicationIconBadgeNumber=0;
    
 }
 
