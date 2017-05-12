@@ -10,7 +10,7 @@
 #import "BPNN.h"
 #import "MBProgressHUD+Simple.h"
 #import "MBProgressHUD+NJ.h"
-
+#import <UserNotifications/UserNotifications.h>
 
 @interface ViewController ()
 {
@@ -19,6 +19,7 @@
     NSString *oper;
     NSTimer *timer;
     NSTimer *timer1;
+    int times;
 }
 //训练次数文本框
 @property (weak, nonatomic) IBOutlet UITextField *trainTimesTF;
@@ -51,6 +52,36 @@
     self.pridictBtn.layer.cornerRadius=4.0f;
     self.pridictBtn.layer.borderWidth=2.0f;
     self.pridictBtn.layer.masksToBounds=YES;
+    [self permission];
+}
+#pragma mark -请求允许
+- (void)permission
+{
+    [[UNUserNotificationCenter currentNotificationCenter]requestAuthorizationWithOptions:UNAuthorizationOptionBadge|UNAuthorizationOptionSound|UNAuthorizationOptionAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        //如果用户允许
+        if(granted)
+        {
+            //如果用户权限申请成功，设置通知中心的代理
+            [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"通知权限被用户拒绝"preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+                //跳转到系统设置页面
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly : @NO} completionHandler:^(BOOL success) {
+                    
+                }];
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:cancelAction];
+            
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+    }];
+
 }
 #pragma mark -写入测试数据并且进行训练
 - (IBAction)trainExample:(id)sender {
@@ -61,7 +92,8 @@
     }
     else
     {
-        int times=_trainTimesTF.text.intValue;
+       times=_trainTimesTF.text.intValue;
+        [self.passaddress passTimes:times];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *docDir = [paths objectAtIndex:0];
         NSString *inFilePath=[docDir stringByAppendingPathComponent:@"in.txt"];
@@ -77,8 +109,9 @@
             //初始化神经网络
             initBPNework();
             //训练神经网络
-            cost=trainNetwork(times);
+            cost=trainNetwork(times,0);
             isFinished=true;
+            
         });
         timer=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
@@ -91,18 +124,40 @@
     {
         [MBProgressHUD hideHUD];
         [MBProgressHUD showSuccess:@"训练完成"];
+        [self createLocalNotification];
         self.costLabel.text=[NSString stringWithFormat:@"%f",cost];
         isFinished=false;
         [timer invalidate];
         timer=nil;
         [timer1 invalidate];
         timer1=nil;
+        
     }
+}
+#pragma mark-创建本地通知
+- (void)createLocalNotification
+{
+    
+    UNNotificationAttachment *attachment=[UNNotificationAttachment attachmentWithIdentifier:@"imageAttach" URL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"png"]] options:nil error:nil];
+    UNMutableNotificationContent *content=[[UNMutableNotificationContent alloc]init];
+    content.badge=@1;
+    content.title=@"提示";
+    content.body=@"神经网络训练完成";
+    content.attachments=@[attachment];
+    content.sound=[UNNotificationSound defaultSound];
+    UNTimeIntervalNotificationTrigger *trigger=[UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO ];
+    UNNotificationRequest *request=[UNNotificationRequest requestWithIdentifier:@"myNoti" content:content trigger:trigger];
+    //添加通知请求
+    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        
+    }];
+    
 }
 #pragma mark -进度
 - (void)process
 {
     int c=process();
+    
     [MBProgressHUD showIndicatorWithText:[NSString stringWithFormat:@"训练神经网络%d次",c]];
 }
 //预测

@@ -11,7 +11,7 @@
 void writeTest(const char *inPath,const char *outPath,const char *oper);
 void readData(const char *inPath,const char *outPath);
 void initBPNework();
-double  trainNetwork(int TrainC);
+double  trainNetwork(int TrainC,int remain);
 double Result(double var1,double var2);
 int process();
 #endif /* BPNN_h */

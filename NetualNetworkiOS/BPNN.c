@@ -232,9 +232,10 @@ void writeNeuron()
     fclose(fp1);
 }
 //训练神经网络
-double  trainNetwork(int TrainC){
+double  trainNetwork(int TrainC ,int remain){
     
     int i,j;
+    c=remain;
     //小于训练次数并且样本平均误差>0.01是继续训练
     do{
         e=0;
@@ -252,7 +253,7 @@ double  trainNetwork(int TrainC){
         printf("%d----样本平均误差为：%lf\n",c,e/Data);
         c++;
     }while(c<TrainC && e/Data>0.01);
-    c=0;
+
     return e/Data;
 }
 

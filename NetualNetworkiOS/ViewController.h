@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol viewControllerDelegate <NSObject>
 
+- (void)passTimes:(int )times;
+
+@end
 @interface ViewController : UIViewController
-
+@property(nonatomic,strong)id<viewControllerDelegate>passaddress;
 
 @end
 
