@@ -47,6 +47,7 @@
     self.trainBtn.layer.cornerRadius=4.0f;
     self.trainBtn.layer.borderWidth=2.0f;
     self.trainBtn.layer.masksToBounds=YES;
+    self.trainTimesTF.text=@"500";
     
     self.pridictBtn.layer.borderColor=[UIColor blackColor].CGColor;
     self.pridictBtn.layer.cornerRadius=4.0f;

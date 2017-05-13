@@ -18,6 +18,7 @@
 		0C20DA5F1EC01A9A00D0FEE6 /* BPNN.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DA5E1EC01A9A00D0FEE6 /* BPNN.c */; };
 		0C5430C11EC06D7A0081A626 /* MBProgressHUD+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */; };
 		0C5431091EC29CF60081A626 /* TouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5431081EC29CF60081A626 /* TouchID.m */; };
+		0C61E76C1EC6AAB60068A5F9 /* faxian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C61E76B1EC6AAB60068A5F9 /* faxian@2x.png */; };
 		0C9FDBD81EC03FB900C5B068 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */; };
 		0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */; };
 		0C9FDBDA1EC03FB900C5B068 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FDBD71EC03FB900C5B068 /* MBProgressHUD.m */; };
@@ -64,6 +65,7 @@
 		0C5430C01EC06D7A0081A626 /* MBProgressHUD+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Simple.m"; sourceTree = "<group>"; };
 		0C5431071EC29CF60081A626 /* TouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchID.h; sourceTree = "<group>"; };
 		0C5431081EC29CF60081A626 /* TouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchID.m; sourceTree = "<group>"; };
+		0C61E76B1EC6AAB60068A5F9 /* faxian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faxian@2x.png"; sourceTree = "<group>"; };
 		0C9FDBD31EC03FB900C5B068 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
 		0C9FDBD41EC03FB900C5B068 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
 		0C9FDBD51EC03FB900C5B068 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		0C20DA2A1EBEB87D00D0FEE6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C61E76B1EC6AAB60068A5F9 /* faxian@2x.png */,
 				0CB585161EC65F3900E9CE23 /* icon.png */,
 				0C20DA2B1EBEB87D00D0FEE6 /* main.m */,
 			);
@@ -314,6 +317,7 @@
 				0C9FDBD91EC03FB900C5B068 /* MBProgressHUD.bundle in Resources */,
 				0C20DA371EBEB87D00D0FEE6 /* Assets.xcassets in Resources */,
 				0C20DA351EBEB87D00D0FEE6 /* Main.storyboard in Resources */,
+				0C61E76C1EC6AAB60068A5F9 /* faxian@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

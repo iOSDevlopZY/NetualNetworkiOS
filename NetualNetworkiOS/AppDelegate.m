@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BPNN.h"
+#import "ViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "TouchID.h"
 
@@ -22,10 +23,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-     [TouchID create];
+    [TouchID create];
+    [self setup3DTouch:application];
     return YES;
 }
-
+#pragma mark -创建3DTouch按钮控件
+- (void)setup3DTouch:(UIApplication*)application
+{
+    UIApplicationShortcutIcon *cameraIcon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"faxian@2x"];
+    UIApplicationShortcutItem *cameraItem = [[UIApplicationShortcutItem alloc] initWithType:@"TRAIN" localizedTitle:@"神经网络训练" localizedSubtitle:@"" icon:cameraIcon userInfo:nil];
+    application.shortcutItems = @[cameraItem];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -80,5 +88,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+#pragma mark -3DTouch代理方法
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    
+}
 @end
