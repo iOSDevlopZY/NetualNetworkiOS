@@ -93,6 +93,7 @@
     }
     else
     {
+        
        times=_trainTimesTF.text.intValue;
         [self.passaddress passTimes:times];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
