@@ -105,7 +105,7 @@
         const char * operChar =[oper UTF8String];
         timer1=[NSTimer timerWithTimeInterval:1 target:self selector:@selector(process) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop]addTimer:timer1 forMode:NSRunLoopCommonModes];
-        writeTest(infilePathChar, outfilePathChar,operChar);
+        CreateTestExample(infilePathChar, outfilePathChar,operChar);
         readData(infilePathChar, outfilePathChar);
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             //初始化神经网络

@@ -8,7 +8,7 @@
 
 #ifndef BPNN_h
 #define BPNN_h
-void writeTest(const char *inPath,const char *outPath,const char *oper);
+void CreateTestExample(const char *inPath,const char *outPath,const char *oper);
 void readData(const char *inPath,const char *outPath);
 void initBPNework();
 double  trainNetwork(int TrainC,int remain);

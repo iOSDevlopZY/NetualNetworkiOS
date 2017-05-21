@@ -31,7 +31,7 @@ double e;
 int c=0;
 
 //写入数据
-void writeTest(const char *inPath,const char *outPath,const char *oper){
+void CreateTestExample(const char *inPath,const char *outPath,const char *oper){
     FILE *fp1,*fp2;
     double r1,r2;
     int i;
